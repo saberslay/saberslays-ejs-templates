@@ -1,0 +1,99 @@
+/* Default: 3-column layout */
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+/* Toggled: 1-column layout */
+.single-column {
+    grid-template-columns: 1fr !important;
+}
+
+.card {
+    box-shadow: 0 8px 16px 0 rgba(95, 236, 255, 0.3);
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s ease;
+    background-color: #5e5e5e;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0px 12px 24px rgba(95, 236, 255, 0.5);
+    transform: translateY(-10px);
+    border: 1px solid rgba(95, 236, 255, 1);
+    background-color: rgba(95, 236, 255, 0.2);
+}
+
+.card-title {
+    font-weight: 600;
+    margin: 10px 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.card-text {
+    color: #ffffff;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.card-subtitle {
+    color: rgba(255, 255, 255, 0.596);
+    padding-bottom: 5px;
+    font-weight: 600;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.triangale-inner {
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.triangle-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.triangle-wrapper-right .triangale-inner {
+    border-width: 0 60px 60px 0;
+    border-color: transparent #222627ab transparent transparent;
+}
+
+.triangle-wrapper-right .triangale-inner .triangale-label {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 10px;
+    right: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.triangle-wrapper-right {
+    right: 0;
+}
+
+.triangle-wrapper-left .triangale-inner {
+    border-width: 60px 60px 0 0;
+    border-color: #222627ab transparent transparent transparent;
+}
+
+.triangle-wrapper-left .triangale-inner .triangale-label {
+    position: absolute;
+    color: rgb(0, 255, 255);
+    top: 10px;
+    left: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
